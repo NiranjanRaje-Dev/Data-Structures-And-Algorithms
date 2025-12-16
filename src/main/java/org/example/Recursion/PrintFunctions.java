@@ -2,8 +2,24 @@ package org.example.Recursion;
 
 public class PrintFunctions {
     public static void main(String[] args) {
-        printDecreasing(10);
-        printIncreasing(10);
+        //printDecreasing(10);
+        //printIncreasing(10);
+        printDecreasingIncreasing(10);
+    }
+
+    private static void printDecreasingIncreasing(int n) {
+
+        // n = 5
+        // print - 5 4 3 2 1 2 3 4 5
+
+        // f(5) - 5 4 3 2 1 2 3 4 5
+        // f(4) - 5 f(4) 5
+        // n = 1 return n
+
+        if(n == 0) return;
+        System.out.println(n + " ");
+        printDecreasingIncreasing(n-1);
+        System.out.println(n + " ");
     }
 
     private static void printIncreasing(int n) {
